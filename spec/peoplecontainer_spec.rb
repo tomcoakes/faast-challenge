@@ -18,9 +18,4 @@ describe PeopleContainer do
     expect(container.passengers).to eq([])
   end
 
-  it "won't board any more than 40 people" do
-    40.times {container.board(passenger)}
-    expect{container.board(passenger)}.to raise_error("The train is full. Wait for the next one!")
-  end
-
 end
