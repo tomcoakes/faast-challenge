@@ -2,13 +2,21 @@ module PeopleContainer
 
 attr_reader :capacity
 
-  def board(passenger)
+  def board_from(station)
     raise "We've reached maximum capacity!" if passenger_count == capacity
-    passengers << passenger
+    passengers << station.remove_passenger
   end
 
-  def alight(passenger)
-    passengers.delete(passenger)
+  def alight_from(station)
+    passengers.delete(station.add_passenger)
+  end
+
+  def remove_passenger
+    passengers.pop
+  end
+
+  def add_passenger
+    passengers.push
   end
 
   def passengers
