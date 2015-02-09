@@ -3,7 +3,7 @@ module PeopleContainer
 attr_reader :capacity
 
   def board(passenger)
-    raise "The train is full. Wait for the next one!" if passenger_count == capacity
+    raise "We've reached maximum capacity!" if passenger_count == capacity
     passengers << passenger
   end
 

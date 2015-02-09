@@ -7,7 +7,7 @@ describe Coach do
 
   it "won't board any more than 40 people" do
     40.times {coach.board(passenger)}
-    expect{coach.board(passenger)}.to raise_error("The train is full. Wait for the next one!")
+    expect{ coach.board(passenger) }.to raise_error("We've reached maximum capacity!")
   end
 
 end
