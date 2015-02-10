@@ -1,6 +1,7 @@
 require 'station'
 
 describe Station do
+  
   let(:station) {Station.new}
   let(:passenger) {double :passenger}
   let(:coach) {double :coach}
