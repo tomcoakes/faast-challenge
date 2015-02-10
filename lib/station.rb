@@ -6,4 +6,8 @@ class Station
   def initialize
     @capacity = 500
   end
+
+  def enter_station(passenger)
+    passengers << passenger
+  end
 end
